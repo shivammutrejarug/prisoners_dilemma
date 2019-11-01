@@ -1,8 +1,8 @@
-import simulation, interactive_game, alwaysCollude, alwaysDefect, titForTat, grudger
+import simulation, interactive_game, alwaysCollude, alwaysDefect, titForTat, grudger, pavlov
 
-choices = {'1-alwaysCollude', '2-alwaysDefect', '3-titForTat', '4-grudger'}
+choices = {'1-alwaysCollude', '2-alwaysDefect', '3-titForTat', '4-grudger', '5-pavlov'}
 
-strategies = {1:alwaysCollude,2:alwaysDefect,3:titForTat,4:grudger}
+strategies = {1: alwaysCollude, 2: alwaysDefect, 3: titForTat, 4: grudger, 5: pavlov}
 
 print('Here are your game options')
 print('press 1 to test your AI strategy against all other AI strategies')

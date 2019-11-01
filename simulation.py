@@ -1,6 +1,6 @@
-import alwaysCollude, alwaysDefect, titForTat, grudger
+import alwaysCollude, alwaysDefect, titForTat, grudger, pavlov
 
-strategies = [alwaysCollude,alwaysDefect,titForTat,grudger]
+strategies = [alwaysCollude,alwaysDefect,titForTat,grudger, pavlov]
 
 scores = {}
 for s in strategies:
@@ -44,15 +44,15 @@ def testStrategy(strategy,turns):
       game(strategy,s,turns)
       game(s,strategy,turns)
       games +=2
-      print('')
+      print("\n")
   opScore = scores[strategy.name()]/games
-  print('your average score against different opponents was',opScore)
+  print('your average score against different opponents was', opScore)
   print('')
   print('So if everybody was doing it')
   for s in strategies:
     scores[s.name()] = 0
-  for i in range(turns):
+  for _ in range(turns):
     game(strategy,strategy,turns)
   selfScore = scores[strategy.name()]/(turns*2)
-  print('your average score against the same strategy opponents was',selfScore)
-  print('your overall average score was',(opScore+selfScore)/2)
+  print('your average score against the same strategy opponents was', selfScore)
+  print('your overall average score was', (opScore+selfScore)/2)

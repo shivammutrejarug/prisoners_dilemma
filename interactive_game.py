@@ -1,13 +1,13 @@
 
-import simulation, interactive_game, alwaysCollude, alwaysDefect, titForTat, grudger
+import simulation, alwaysCollude, alwaysDefect, titForTat, grudger, pavlov
 
-strategies = [alwaysCollude, alwaysDefect, titForTat, grudger]
+strategies = [alwaysCollude, alwaysDefect, titForTat, grudger, pavlov]
 
 def play(AI,rounds):
   print('Hello human what is your name?')
   yourName = input()
   print('Human game against',AI.name())
-  global scores
+  #global scores
   yourScore = 0
   AIscore = 0
 
@@ -15,7 +15,7 @@ def play(AI,rounds):
   yourMove = int(input())
   AImove = AI.play('start')
 
-  for i in range(rounds):
+  for _ in range(rounds):
     if yourMove == 1 and AImove==1:
       yourScore +=1
       AIscore +=1
